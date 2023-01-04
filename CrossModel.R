@@ -38,28 +38,28 @@ gts<-function(n,d,model,C){
     J=s*Y
   }
   if(model==2){
-    I=r*X
-    J=r*Y
-  }
-  if(model==3){
     I=s*X
     J=s*Y
   }
-  if(model==4){
+  if(model==3){
     I=r*X
-    J=(1-r^2)*Y
+    J=r*Y
   }
-  if(model==5){
+  if(model==4){
     I=s*X
     J=(1-s^2)*Y
   }
-  if(model==6){
+  if(model==5){
     I=r*X
-    J=((r-0.8)^2+(r-0.2)^2)*Y
+    J=(1-r^2)*Y
   }
-  if(model==7){
+  if(model==6){
     I=s*X
     J=((s-0.8)^2+(s-0.2)^2)*Y
+  }
+  if(model==7){
+    I=r*X
+    J=((r-0.8)^2+(r-0.2)^2)*Y
   }
   return(list(X=X,Y=Y,I=I,J=J,r=r,s=s))
 }
