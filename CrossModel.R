@@ -61,5 +61,9 @@ gts<-function(n,d,model,C){
     I=r*X
     J=((r-0.8)^2+(r-0.2)^2)*Y
   }
+  if(model==8){
+    I=X
+    J=Y
+  }
   return(list(X=X,Y=Y,I=I,J=J,r=r,s=s))
 }
