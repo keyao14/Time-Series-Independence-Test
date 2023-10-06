@@ -27,9 +27,9 @@ FOD_dcov<-function(X,I,d,m,K,n.boot=500){
   }
   pc_b=rowSums(pc_b^2)
   pc_fod_b=rowSums(pc_fod_b^2)
-  p2=mean(pc_b>pc)
-  p4=mean(pc_fod_b>pc_fod)
-  return(c(p2,p4))
+  p1=mean(pc_b>pc)
+  p2=mean(pc_fod_b>pc_fod)
+  return(c(p1,p2))
 }
 FOD<-function(X,I,d,m,K,n.boot=500){
   perm=function(j){
@@ -59,9 +59,9 @@ FOD<-function(X,I,d,m,K,n.boot=500){
   }
   pc_b=rowSums(pc_b^2)
   pc_fod_b=rowSums(pc_fod_b^2)
-  p2=mean(pc_b>pc)
-  p4=mean(pc_fod_b>pc_fod)
-  return(c(p2,p4))
+  p1=mean(pc_b>pc)
+  p2=mean(pc_fod_b>pc_fod)
+  return(c(p1,p2))
 }
 FOD_kendall<-function(X,I,d,m,K,n.boot=500){
   perm=function(j){
@@ -91,9 +91,9 @@ FOD_kendall<-function(X,I,d,m,K,n.boot=500){
   }
   pc_b=rowSums(pc_b^2)
   pc_fod_b=rowSums(pc_fod_b^2)
-  p2=mean(pc_b>pc)
-  p4=mean(pc_fod_b>pc_fod)
-  return(c(p2,p4))
+  p1=mean(pc_b>pc)
+  p2=mean(pc_fod_b>pc_fod)
+  return(c(p1,p2))
 }
 
 
