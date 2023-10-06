@@ -9,7 +9,7 @@ for (i in c(1:3)) {
     n = 600
     b = 10
     m = 6
-    Err <- foreach(rep=1:500, .combine='cbind',.packages = depend_packages) %dopar%
+    Err <- foreach(rep=1:1000, .combine='cbind',.packages = depend_packages) %dopar%
       {
         X=sx(n,i,C)$X
         DX=c(X[2:n]-X[1:(n-1)],X[1]-X[n])
