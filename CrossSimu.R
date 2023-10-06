@@ -3,9 +3,9 @@ library(doParallel); cl <- makeCluster(50); registerDoParallel(cl)
 source('CrossTest.R')
 source('CrossModel.R')
 depend_packages = c('energy','pcaPP','testcorr')
-for(i in c(1:7)){
+for(i in c(1:8)){
   for(j in (c(0:4)*0.2)){
-    Err <- foreach(rep=1:500, .combine='cbind',.packages = depend_packages) %dopar%
+    Err <- foreach(rep=1:1000, .combine='cbind',.packages = depend_packages) %dopar%
       {
         
         simu = gts(600,12,i,j)
