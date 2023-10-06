@@ -4,7 +4,7 @@ sx<-function(n,model,C){
   X[1] = eps[1]
   X[2] = eps[2]
   for (i in 3:n){
-    X[i] = C*X[i-2]+eps[i]
+    X[i] = C^2*X[i-1]+C*X[i-2]+eps[i]
   }
   r=c()
   s=c()
